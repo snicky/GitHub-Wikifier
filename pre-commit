@@ -100,9 +100,9 @@ function wikify() {
       (( reverse_pointer_depth++ ))
       recursive_write $(to_parent_subject $@)
       # if current - 1 = home. Then we're at the bottom! 
-      if [[ "$(to_parent_subject $@)" == "$subjects" ]]; then
-        echo "$(subject_to_list $file)" >> "$@/_sidebar.md"
-      fi
+      # if [[ "$(to_parent_subject $@)" == "$subjects" ]]; then
+      #   echo "$(subject_to_list $file)" >> "$@/_sidebar.md"
+      # fi
     else
       space=$(calculate_spaces $(($reverse_pointer_depth - 2)))
       echo "$(subject_to_list $file)" >> "$subjects/Home.md"
@@ -159,7 +159,7 @@ function wikify() {
   for subject in $(gls_or_ls -l -d $PWD/* | egrep '^d' | awk '{ print $9}'); do;
     continue_if_filtered $subject
     parse_subject $subject
-  done
+  dones
 
   echo "$subjects/Home.md" >> /tmp/wikify.txt
   while read line
