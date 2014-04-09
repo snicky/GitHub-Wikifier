@@ -23,7 +23,7 @@ See it in action in [artoo wiki](https://github.com/hybridgroup/artoo/wiki)
 
 3. Run command to install script
 
-    ```curl -Lo- https://goo.gl/C170k | bash```
+    ```curl -Lo- http://goo.gl/HXcEgP | bash```
 
 4. Commit your changes
 
