@@ -1,3 +1,7 @@
+# GitHub-Wikifier without sidebars
+
+---
+
 # What is this?
 
 GitHub Wikifier helps you organize your Github Wiki with a set of good practices
