@@ -159,7 +159,7 @@ function wikify() {
   for subject in $(gls_or_ls -l -d $PWD/* | egrep '^d' | awk '{ print $9}'); do;
     continue_if_filtered $subject
     parse_subject $subject
-  dones
+  done
 
   echo "$subjects/Home.md" >> /tmp/wikify.txt
   while read line
