@@ -117,9 +117,9 @@ function wikify() {
     # Directory write
     if [[ "$depth" -eq "0" ]]; then
       echo "$(subject_to_header $@.md)"  >> "$subjects/Home.md"
-      echo "$(subject_to_header $@.md)\n---"  > "$@/_sidebar.md"
+      # echo "$(subject_to_header $@.md)\n---"  > "$@/_sidebar.md"
       echo "$@.md" >> /tmp/wikify.txt
-      echo "$@/_sidebar.md" >> /tmp/wikify.txt
+      # echo "$@/_sidebar.md" >> /tmp/wikify.txt
     fi
 
     for file in $(gls_or_ls -l -v $@ | awk '{ print $9 }'); do;
